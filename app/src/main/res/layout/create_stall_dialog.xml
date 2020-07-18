@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:elevation="@dimen/_5sdp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/rectangle_white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp">
+            <ImageView
+                android:id="@+id/ivClose"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                app:srcCompat="@drawable/ic_close"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/_6sdp"
+             />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="CREATE STORE"
+                android:textStyle="bold"
+                android:textColor="@color/grey_600"/>
+            <ImageView
+                android:id="@+id/ivCheck"
+                android:layout_alignParentRight="true"
+                android:layout_width="@dimen/_55sdp"
+                android:layout_height="@dimen/_35sdp"
+                app:srcCompat="@drawable/ic_tick"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/_7sdp"
+                />
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey_500"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stall Name"
+            android:textStyle="bold"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/black"
+            android:layout_margin="@dimen/_10sdp"/>
+        <EditText
+            android:paddingLeft="@dimen/_5sdp"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:background="@drawable/rectangle_view"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_30sdp"
+            android:id="@+id/etStall"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

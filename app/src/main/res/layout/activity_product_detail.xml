@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.customer.product.ProductDetailActivity">
+    <LinearLayout
+        android:id="@+id/llHeader"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_gravity="center_vertical"
+            android:padding="@dimen/_2sdp"
+            android:layout_marginLeft="@dimen/_5sdp"
+            app:srcCompat="@drawable/ic_left_arrow" />
+
+        <TextView
+            android:layout_weight="3"
+            android:paddingRight="@dimen/_30sdp"
+            android:id="@+id/tvProductName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp" />
+
+<ImageView
+    android:layout_weight="0.2"
+    android:layout_width="@dimen/_20sdp"
+    android:layout_height="@dimen/_20sdp"
+    app:srcCompat="@drawable/ic_share"
+    android:layout_gravity="center_vertical"
+    android:padding="@dimen/_2sdp"
+    android:id="@+id/ivShare"/>
+    </LinearLayout>
+    <ScrollView
+        android:layout_below="@+id/llHeader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_150sdp"
+                android:id="@+id/rvImage"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/black"
+                android:layout_margin="@dimen/_20sdp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:id="@+id/tvProductName1"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_120sdp"
+                android:id="@+id/rvPrice"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:gravity="center_vertical"
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:text="Description"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp"/>
+                    <View
+                        android:layout_width="@dimen/_85sdp"
+                        android:layout_height="1dp"
+                        android:background="@color/blue_500"/>
+
+                    <TextView
+                         android:padding="@dimen/_10sdp"
+                        android:gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:id="@+id/tvDescription"
+                        android:textColor="@color/grey_700"
+                        android:textSize="@dimen/_11sdp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+    <RelativeLayout
+        android:layout_above="@+id/llCart"
+        android:elevation="@dimen/_10sdp"
+        android:id="@+id/rlCart"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/_20sdp"
+        android:layout_width="@dimen/_45sdp"
+        android:layout_height="@dimen/_45sdp"
+        android:background="@drawable/circle">
+        <ImageView
+            android:layout_centerInParent="true"
+            android:layout_width="@dimen/_22sdp"
+            android:layout_height="@dimen/_22sdp"
+            app:srcCompat="@drawable/ic_cart"/>
+        <TextView
+            android:visibility="gone"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circle_red"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/white"
+            android:text="0"
+            android:id="@+id/tvCount"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/llCart"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp">
+        <TextView
+            android:background="@color/yellow_800"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/tvAddtoCart"
+            android:text="ADD TO CART"
+            android:textSize="@dimen/_12sdp"
+            android:textAlignment="center"
+          android:gravity="center"
+            android:textColor="@color/white"/>
+        <TextView
+            android:background="@color/blue_600"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/tvBuyNow"
+            android:text="BUY NOW"
+            android:textSize="@dimen/_12sdp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressbar"
+        android:layout_centerInParent="true"/>
+</RelativeLayout>
